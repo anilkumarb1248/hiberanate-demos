@@ -1,0 +1,13 @@
+
+// MySql User Creation
+CREATE DATABASE  IF NOT EXISTS hibernate_emp_database;
+
+CREATE USER 'hib_employee'@'localhost' IDENTIFIED WITH mysql_native_password BY 'hib_employee';
+GRANT ALL PRIVILEGES ON hibernate_emp_database.* TO 'hib_employee'@'localhost';
+
+// Oracle User Creation
+
+CREATE USER hib_employee IDENTIFIED BY hib_employee;
+GRANT CONNECT, RESOURCE, DBA TO hib_employee;
+GRANT UNLIMITED TABLESPACE TO hib_employee;
+
